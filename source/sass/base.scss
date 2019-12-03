@@ -32,6 +32,8 @@
 
 html {
   box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
 *,
@@ -79,15 +81,15 @@ a {
 
 .button {
   font-family: "RobotoCondensed", "Arial", sans-serif;
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
+  display: block;
+  width: 100px;
+  text-align: center;
   text-transform: uppercase;
+  color: $white;
   border: 1px solid $baby-blue;
   border-radius: 5px;
-  width: 100px;
-  display: block;
-  text-align: center;
-  color: $white;
 
   &:hover,
   &:focus {
@@ -98,15 +100,3 @@ a {
     opacity: 0.3;
   }
 }
-
-// @media (max-width: $tablet-width) {
-//   .wrapper {
-//     // width: 770px;
-//   }
-// }
-
-// @media (max-width: $mobile-width) {
-//   .wrapper {
-//     // width: 320px;
-//   }
-// }

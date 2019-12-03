@@ -1,7 +1,7 @@
 .logo {
   display: flex;
-  justify-content: space-between;
   flex-shrink: 0;
+  justify-content: space-between;
   width: 201px;
   height: 52px;
   color: $logo-grey;
@@ -13,18 +13,18 @@
 
 .logo__text-header {
   font-family: "RobotoCondensed", "Arial", sans-serif;
-  font-weight: 700;
   font-size: 25px;
-  padding: 12px 0 0 0;
+  font-weight: 700;
   margin: 0;
+  padding: 12px 0 0 0;
 }
 
 .logo__text-slogan {
   font-family: "Roboto", "Arial", sans-serif;
-  font-weight: 700;
   font-size: 12px;
-  padding: 4px 0 0 0;
+  font-weight: 700;
   margin: 0;
+  padding: 4px 0 0 0;
   color: $light-grey;
 }
 

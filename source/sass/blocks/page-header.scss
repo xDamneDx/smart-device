@@ -115,15 +115,15 @@
 
   .page-header__contacts-item {
     font-size: 0;
-    margin-left: 33px;
     margin-bottom: 2px;
+    margin-left: 33px;
   }
 
   .page-header__contacts-item--mail a {
-    padding-left: 0;
     display: block;
     width: 26px;
     height: 19px;
+    padding-left: 0;
 
     &::before {
       content: "";
@@ -136,10 +136,10 @@
   }
 
   .page-header__contacts-item--phone a {
-    padding-left: 0;
     display: block;
     width: 24px;
     height: 24px;
+    padding-left: 0;
 
     &::before {
       content: "";
