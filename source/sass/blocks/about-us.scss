@@ -36,10 +36,10 @@
   &:last-of-type {
     margin-bottom: 38px;
   }
+}
 
-  &--tablet {
-    display: none;
-  }
+.about-us__responsive-text--tablet {
+  display: none;
 }
 
 .about-us__button {
@@ -83,14 +83,14 @@
     &:last-of-type {
       margin-bottom: 41px;
     }
+  }
 
-    &--desktop {
-      display: none;
-    }
+  .about-us__responsive-text--desktop {
+    display: none;
+  }
 
-    &--tablet {
-      display: inline;
-    }
+  .about-us__responsive-text--tablet {
+    display: inline;
   }
 }
 
