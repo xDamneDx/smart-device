@@ -1,0 +1,78 @@
+.form__header {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50px;
+  margin: 0;
+  color: $white;
+}
+
+.form__header-desc {
+  font-weight: 400;
+  display: block;
+  color: $white;
+}
+
+.form__fields-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.form__input {
+  color: $white;
+  outline: none;
+  border: 1px solid rgba($color: $white, $alpha: 0.01);
+  background-color: rgba($color: $white, $alpha: 0.1);
+
+  &::placeholder {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $white;
+  }
+}
+
+.form__buttons-wrapper {
+  margin: 0;
+}
+
+.form__checkbox {
+  font-size: 14px;
+  position: relative;
+  padding-left: 33px;
+  cursor: pointer;
+  opacity: 0.8;
+  color: $white;
+
+  input[type="checkbox"]:focus & {
+    opacity: 1;
+  }
+
+  input[type="checkbox"] + &-cover {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    opacity: 0.4;
+    border: 1px solid $white;
+  }
+
+  input[type="checkbox"]:checked + &-cover {
+    opacity: 1;
+    background-image: url("data:image/svg+xml,%3Csvg fill='none' height='6' viewBox='0 0 9 6' width='9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m.5 2 3 3 4.5-4.5' stroke='%23fff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 9px 6px;
+  }
+
+  input[type="checkbox"]:hover + &-cover,
+  input[type="checkbox"]:focus + &-cover {
+    opacity: 1;
+  }
+}
