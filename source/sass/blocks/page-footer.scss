@@ -1,0 +1,133 @@
+.page-footer {
+  background-color: $footer-bg;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 65px;
+  padding-bottom: 35px;
+  padding-left: 15px;
+}
+
+.page-footer__base {
+  width: 22.6%;
+  min-width: 216px;
+
+  .years-of-service {
+    display: none;
+  }
+}
+
+.page-footer__logo {
+  margin-bottom: 54px;
+}
+
+.page-footer__social {
+  width: 112px;
+}
+
+.page-footer__nav {
+  width: 39%;
+  min-width: 502px;
+  margin: 0;
+  padding: 0;
+}
+
+.page-footer__contacts {
+  width: 24.6%;
+}
+
+@media (max-width: $tablet-width) {
+  .page-footer__wrapper {
+    padding-top: 19px;
+    padding-right: 0;
+    padding-bottom: 21px;
+    padding-left: 0;
+  }
+
+  .page-footer__base {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 24px;
+    padding-bottom: 7px;
+    padding-left: 25px;
+    border-bottom: 1px solid rgba($color: #626962, $alpha: 0.2);
+
+    .years-of-service {
+      font-size: 13px;
+      line-height: 24px;
+      display: block;
+      padding-top: 17px;
+      padding-left: 14px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      opacity: 0.5;
+      color: $dark-grey;
+    }
+  }
+
+  .page-footer__logo {
+    margin-bottom: 0;
+  }
+
+  .page-footer__social {
+    margin-top: 12px;
+  }
+
+  .page-footer__nav {
+    width: 50%;
+    min-width: 235px;
+    padding-top: 38px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+  }
+
+  .page-footer__contacts {
+    width: 50%;
+    padding-top: 38px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-footer__wrapper {
+    padding-top: 46px;
+    padding-bottom: 0;
+
+    .years-of-service {
+      padding: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .page-footer__base {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 26px;
+  }
+
+  .page-footer__social {
+    width: 112px;
+    margin-bottom: 38px;
+  }
+
+  .page-footer__nav {
+    width: 100%;
+  }
+
+  .page-footer__contacts {
+    padding: 0;
+    width: 100%;
+  }
+}

@@ -1,14 +1,16 @@
 .logo {
   display: flex;
   flex-shrink: 0;
-  justify-content: space-between;
-  width: 201px;
   height: 52px;
   color: $logo-grey;
 
   &:hover {
     cursor: pointer;
   }
+}
+
+.logo__image {
+  margin-right: 16px;
 }
 
 .logo__text-header {
@@ -32,6 +34,7 @@
   .logo__image--header {
     width: 38px;
     height: 38px;
+    margin-right: 0;
   }
 
   .logo__text--header {

@@ -1,0 +1,80 @@
+.contacts__header {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 25px;
+  padding-left: 2.4px;
+  letter-spacing: 0.78px;
+  text-transform: uppercase;
+  color: $dark-grey;
+}
+
+.contacts__link {
+  font-size: 15px;
+  font-style: normal;
+  line-height: 25px;
+  display: block;
+  opacity: 0.5;
+  color: $dark-grey;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .contacts__header {
+    display: block;
+    margin: 0;
+    padding: 28px 40px 27px 15px;
+    border-top: 1px solid rgba($color: #626962, $alpha: 0.2);
+  }
+
+  .contacts__wrapper {
+    display: none;
+    padding-top: 5px;
+    padding-right: 30px;
+    padding-bottom: 26px;
+    padding-left: 15px;
+  }
+
+  .contacts__input:checked ~ .contacts__wrapper {
+    display: block;
+  }
+
+  .contacts__label {
+    position: relative;
+    display: block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 36px;
+      right: 17px;
+      width: 16px;
+      height: 1px;
+      background-color: #c4c4c4;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 29px;
+      right: 24px;
+      width: 1px;
+      height: 16px;
+      background-color: #c4c4c4;
+    }
+  }
+
+  .contacts__input:checked ~ .contacts__label::after {
+    content: none;
+  }
+}

@@ -99,7 +99,7 @@
     padding-top: 22px;
     padding-right: 11px;
     padding-bottom: 55px;
-    padding-left: 17px;
+    padding-left: 14px;
 
     &::before {
       content: none;
@@ -113,9 +113,14 @@
 
   .about-us__text {
     margin-bottom: 40px;
+    padding-left: 3px;
 
     &:last-of-type {
       margin-bottom: 28px;
     }
+  }
+
+  .about-us__button {
+    margin-left: 3px;
   }
 }
