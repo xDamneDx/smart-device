@@ -11,11 +11,16 @@
   color: $dark-grey;
 }
 
+.contacts__wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .contacts__link {
   font-size: 15px;
   font-style: normal;
   line-height: 25px;
-  display: block;
   opacity: 0.5;
   color: $dark-grey;
 
@@ -46,7 +51,7 @@
   }
 
   .contacts__input:checked ~ .contacts__wrapper {
-    display: block;
+    display: flex;
   }
 
   .contacts__label {
