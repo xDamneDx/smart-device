@@ -1,20 +1,9 @@
 .intro {
   position: relative;
   padding-top: 205px;
+  padding-bottom: 265px;
   padding-left: 12px;
   color: $white;
-
-  &::before {
-    content: "Скролл вниз";
-    font-size: 14px;
-    position: absolute;
-    top: 616px;
-    left: -22px;
-    display: inline-block;
-    transform: rotate(-90deg);
-    opacity: 0.5;
-    color: $white;
-  }
 }
 
 .intro__header {
@@ -66,11 +55,8 @@
 @media (max-width: $tablet-width) {
   .intro {
     padding-top: 97px;
+    padding-bottom: 153px;
     padding-left: 88px;
-
-    &::before {
-      display: none;
-    }
   }
 
   .intro__header {
@@ -109,6 +95,7 @@
   .intro {
     padding-top: 215px;
     padding-right: 10px;
+    padding-bottom: 70px;
     padding-left: 15px;
   }
 
