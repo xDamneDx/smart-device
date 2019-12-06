@@ -59,15 +59,27 @@
   }
 
   &--production::before {
-    background-image: url("../img/bg-products-production-desktop.jpg");
+    background-image: url("../img/bg-products-production-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-products-production-desktop@2x.jpg");
+    }
   }
 
   &--installation::before {
-    background-image: url("../img/bg-products-installation-desktop.jpg");
+    background-image: url("../img/bg-products-installation-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-products-installation-desktop@2x.jpg");
+    }
   }
 
   &--accessories::before {
-    background-image: url("../img/bg-products-accessories-desktop.jpg");
+    background-image: url("../img/bg-products-accessories-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-products-accessories-desktop@2x.jpg");
+    }
   }
 
   &::after {
@@ -138,15 +150,27 @@
     padding-left: 45px;
 
     &--production::before {
-      background-image: url("../img/bg-products-production-tablet.jpg");
+      background-image: url("../img/bg-products-production-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-products-production-tablet@2x.jpg");
+      }
     }
 
     &--installation::before {
-      background-image: url("../img/bg-products-installation-tablet.jpg");
+      background-image: url("../img/bg-products-installation-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-products-installation-tablet@2x.jpg");
+      }
     }
 
     &--accessories::before {
-      background-image: url("../img/bg-products-accessories-tablet.jpg");
+      background-image: url("../img/bg-products-accessories-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-products-accessories-tablet@2x.jpg");
+      }
     }
   }
 }
@@ -181,15 +205,27 @@
     }
 
     &--production::before {
-      background-image: url("../img/bg-products-production-mobile.jpg");
+      background-image: url("../img/bg-products-production-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-products-production-mobile@2x.jpg");
+      }
     }
 
     &--installation::before {
-      background-image: url("../img/bg-products-installation-mobile.jpg");
+      background-image: url("../img/bg-products-installation-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-products-installation-mobile@2x.jpg");
+      }
     }
 
     &--accessories::before {
-      background-image: url("../img/bg-products-accessories-mobile.jpg");
+      background-image: url("../img/bg-products-accessories-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-products-accessories-mobile@2x.jpg");
+      }
     }
   }
 }

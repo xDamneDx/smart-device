@@ -13,9 +13,14 @@
     left: 108px;
     width: 220px;
     height: 317px;
-    background-image: url("../img/bg-about-us-2005-desktop.png");
+    background-image: url("../img/bg-about-us-2005-desktop@1x.png");
     background-repeat: no-repeat;
     background-size: auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-about-us-2005-desktop@2x.png");
+      background-size: 220px 317px;
+    }
   }
 }
 
@@ -66,9 +71,14 @@
       left: 0;
       width: 251.08px;
       height: 361.79px;
-      background-image: url("../img/bg-about-us-2005-tablet.png");
+      background-image: url("../img/bg-about-us-2005-tablet@1x.png");
       background-repeat: no-repeat;
       background-size: auto;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-about-us-2005-tablet@2x.png");
+        background-size: 244px 362px;
+      }
     }
   }
 
