@@ -4,15 +4,16 @@
 
 .page-footer__wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 65px;
+  padding-right: 19px;
   padding-bottom: 35px;
   padding-left: 15px;
 }
 
 .page-footer__base {
-  width: 22.6%;
+  flex-shrink: 3;
+  width: 416px;
   min-width: 216px;
 
   .years-of-service {
@@ -30,18 +31,23 @@
 }
 
 .page-footer__nav {
-  width: 39%;
-  min-width: 502px;
+  flex-shrink: 5;
+  width: 558px;
   margin: 0;
   padding: 0;
 }
 
 .page-footer__contacts {
-  width: 24.6%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  flex-shrink: 2;
+  width: 425px;
 }
 
 @media (max-width: $tablet-width) {
   .page-footer__wrapper {
+    flex-wrap: wrap;
     padding-top: 19px;
     padding-right: 0;
     padding-bottom: 21px;
@@ -89,6 +95,7 @@
   }
 
   .page-footer__contacts {
+    align-items: flex-start;
     width: 50%;
     padding-top: 38px;
     padding-right: 15px;
@@ -103,14 +110,14 @@
     padding-bottom: 0;
 
     .years-of-service {
-      padding: 0;
       margin-bottom: 20px;
+      padding: 0;
     }
   }
 
   .page-footer__base {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     padding: 0;
   }
 
@@ -128,7 +135,7 @@
   }
 
   .page-footer__contacts {
-    padding: 0;
     width: 100%;
+    padding: 0;
   }
 }
