@@ -91,11 +91,10 @@
     .nav__item {
       padding-top: 10px;
       padding-bottom: 10px;
-      border-bottom: 1px solid rgba($color: #626962, $alpha: 0.2);
     }
 
     .nav__item:last-of-type {
-      border-bottom: none;
+      margin-bottom: 20px;
     }
   }
 

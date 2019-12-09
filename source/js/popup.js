@@ -14,6 +14,14 @@
   var isStorageSupport = true;
   var storage = {};
 
+  var noScroll = function () {
+    window.scrollTo(0, 0);
+  };
+  var closePopup = function () {
+    popup.classList.remove('modal--show');
+    window.removeEventListener('scroll', noScroll);
+  };
+
   try {
     storage.name = localStorage.getItem('name');
     storage.phone = localStorage.getItem('phone');
@@ -25,6 +33,7 @@
   link.addEventListener('click', function (evt) {
     evt.preventDefault();
     popup.classList.add('modal--show');
+    window.addEventListener('scroll', noScroll);
 
     if (storage.name) {
       userName.value = storage.name;
@@ -38,7 +47,7 @@
 
   close.addEventListener('click', function (evt) {
     evt.preventDefault();
-    popup.classList.remove('modal--show');
+    closePopup();
   });
 
   form.addEventListener('submit', function () {
@@ -53,14 +62,14 @@
     if (evt.keyCode === KEYCODE.esc) {
       evt.preventDefault();
       if (popup.classList.contains('modal--show')) {
-        popup.classList.remove('modal--show');
+        closePopup();
       }
     }
   });
 
   popup.addEventListener('click', function (evt) {
     if (evt.target === popup) {
-      popup.classList.remove('modal--show');
+      closePopup();
     }
   });
 })();

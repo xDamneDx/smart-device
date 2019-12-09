@@ -1,8 +1,9 @@
 .advantages {
   padding-top: 112px;
-  padding-right: 138px;
-  padding-left: 138px;
+  padding-right: 30px;
   padding-bottom: 48px;
+  padding-left: 30px;
+  max-width: 1230px;
 }
 
 .advantages__list {
@@ -32,8 +33,8 @@
   &:hover {
     transition: 0.3s ease-in-out;
     color: $white;
-    background-color: $baby-blue;
     border-color: $baby-blue;
+    background-color: $baby-blue;
   }
 
   &:hover h3 {
@@ -43,11 +44,13 @@
 
   &:hover svg {
     transition: 0.3s ease-in-out;
+
     fill: $white;
   }
 
   svg {
     margin-bottom: 21px;
+
     fill: $baby-blue;
   }
 
@@ -109,9 +112,9 @@
 
   .advantages__item {
     width: 100%;
+    min-height: auto;
     margin-bottom: 20px;
     padding-top: 25px;
-    min-height: auto;
 
     svg {
       margin-bottom: 5px;

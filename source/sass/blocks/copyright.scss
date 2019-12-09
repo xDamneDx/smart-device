@@ -15,12 +15,16 @@
 }
 
 .copyright__item {
+  &--secure {
+    flex-grow: 2;
+  }
+
   &--service {
-    width: 21.3%;
+    flex-grow: 3.9;
   }
 
   &--confidence {
-    width: 38.7%;
+    flex-grow: 11;
   }
 }
 
@@ -32,13 +36,17 @@
   opacity: 0.5;
   color: $dark-grey;
 
-  &:hover,
+  &[href]:hover,
   &:focus {
     opacity: 0.7;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
+  }
+
+  &:not([href]) {
+    cursor: default;
   }
 }
 
