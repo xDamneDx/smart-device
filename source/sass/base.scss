@@ -1,38 +1,5 @@
-@font-face {
-  font-family: "PTMono";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/PTMono-Regular.woff2") format("woff2"), url("../fonts/PTMono-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "RobotoCondensed";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "RobotoCondensed";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
-}
-
 html {
   box-sizing: border-box;
-
   scroll-behavior: smooth;
 }
 
@@ -43,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "PTMono", "Times New Roman", serif;
+  font-family: $pt-mono;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -54,9 +21,7 @@ body {
   background-color: #e5e5e5;
 }
 
-.visually-hidden,
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+.visually-hidden {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -71,32 +36,4 @@ input[type="radio"].visually-hidden {
 
 a {
   text-decoration: none;
-}
-
-.wrapper {
-  width: 100%;
-  max-width: 1446px;
-  margin: 0 auto;
-}
-
-.button {
-  font-family: "RobotoCondensed", "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  display: block;
-  width: 100px;
-  text-align: center;
-  text-transform: uppercase;
-  color: $white;
-  border: 1px solid $baby-blue;
-  border-radius: 5px;
-
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }

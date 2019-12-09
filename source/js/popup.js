@@ -14,7 +14,6 @@
   var isStorageSupport = true;
   var storage = {};
 
-
   try {
     storage.name = localStorage.getItem('name');
     storage.phone = localStorage.getItem('phone');

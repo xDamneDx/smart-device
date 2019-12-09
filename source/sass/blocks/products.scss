@@ -10,7 +10,7 @@
 }
 
 .products__header {
-  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-family: $roboto-condensed;
   font-size: 36px;
   font-weight: 400;
   line-height: 50px;
@@ -29,58 +29,18 @@
 
 .products__item {
   width: 31.6%;
-  min-height: 620px;
+  height: 620px;
   margin-bottom: 30px;
 }
 
 .products__link {
   position: relative;
   display: block;
+  overflow: hidden;
   width: 100%;
   height: 100%;
-  padding-top: 50px;
-  padding-right: 43px;
-  padding-bottom: 50px;
-  padding-left: 43px;
   color: $white;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    background-color: $light-grey;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-  }
-
-  &--production::before {
-    background-image: url("../img/bg-products-production-desktop@1x.jpg");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-products-production-desktop@2x.jpg");
-    }
-  }
-
-  &--installation::before {
-    background-image: url("../img/bg-products-installation-desktop@1x.jpg");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-products-installation-desktop@2x.jpg");
-    }
-  }
-
-  &--accessories::before {
-    background-image: url("../img/bg-products-accessories-desktop@1x.jpg");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-products-accessories-desktop@2x.jpg");
-    }
-  }
+  background-color: $dark-grey;
 
   &::after {
     content: "";
@@ -96,21 +56,32 @@
     background-size: auto;
   }
 
-  &:hover::before,
-  &:focus::before {
-    opacity: 0.3;
+  &:hover .products__image,
+  &:focus .products__image {
+    opacity: 0.4;
   }
 
-  &:active::before {
+  &:active .products__image {
     opacity: 0.1;
   }
 }
 
+.products__image {
+  position: relative;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  opacity: 0.2;
+}
+
 .products__link-text {
-  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-family: $roboto-condensed;
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
+  position: absolute;
+  top: 50px;
+  left: 43px;
   display: block;
   width: 160px;
   margin: 0;
@@ -138,40 +109,25 @@
 
   .products__item {
     width: 100%;
-    min-height: 256px;
+    height: 256px;
     margin-bottom: 46px;
   }
 
-  .products__link {
-    min-height: 256px;
-    padding-top: 40px;
-    padding-right: 45px;
-    padding-bottom: 40px;
-    padding-left: 45px;
+  .products__link--production .products__image {
+    transform: translateY(-40%);
+  }
 
-    &--production::before {
-      background-image: url("../img/bg-products-production-tablet@1x.jpg");
+  .products__image {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+  }
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-products-production-tablet@2x.jpg");
-      }
-    }
-
-    &--installation::before {
-      background-image: url("../img/bg-products-installation-tablet@1x.jpg");
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-products-installation-tablet@2x.jpg");
-      }
-    }
-
-    &--accessories::before {
-      background-image: url("../img/bg-products-accessories-tablet@1x.jpg");
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-products-accessories-tablet@2x.jpg");
-      }
-    }
+  .products__link-text {
+    top: 40px;
+    left: 45px;
   }
 }
 
@@ -195,37 +151,17 @@
   }
 
   .products__link {
-    padding-top: 20px;
-    padding-right: 35px;
-    padding-bottom: 20px;
-    padding-left: 35px;
-
     &::after {
       background-position: 28px 27px;
     }
+  }
 
-    &--production::before {
-      background-image: url("../img/bg-products-production-mobile@1x.jpg");
+  .products__link--production .products__image {
+    transform: translateY(-40%);
+  }
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-products-production-mobile@2x.jpg");
-      }
-    }
-
-    &--installation::before {
-      background-image: url("../img/bg-products-installation-mobile@1x.jpg");
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-products-installation-mobile@2x.jpg");
-      }
-    }
-
-    &--accessories::before {
-      background-image: url("../img/bg-products-accessories-mobile@1x.jpg");
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-products-accessories-mobile@2x.jpg");
-      }
-    }
+  .products__link-text {
+    top: 20px;
+    left: 35px;
   }
 }
