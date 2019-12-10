@@ -14,12 +14,14 @@
   var isStorageSupport = true;
   var storage = {};
 
-  var noScroll = function () {
-    window.scrollTo(0, 0);
+  var openPopup = function () {
+    popup.classList.add('modal--show');
+    document.body.classList.add('disable-scroll');
   };
+
   var closePopup = function () {
     popup.classList.remove('modal--show');
-    window.removeEventListener('scroll', noScroll);
+    document.body.classList.remove('disable-scroll');
   };
 
   try {
@@ -32,8 +34,7 @@
 
   link.addEventListener('click', function (evt) {
     evt.preventDefault();
-    popup.classList.add('modal--show');
-    window.addEventListener('scroll', noScroll);
+    openPopup();
 
     if (storage.name) {
       userName.value = storage.name;
