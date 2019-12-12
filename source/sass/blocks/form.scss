@@ -1,3 +1,30 @@
+.form {
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    appearance: none;
+
+    color: $white;
+    border-radius: 0;
+    border: 1px solid rgba($color: $white, $alpha: 0.01);
+    outline: none;
+    background-color: rgba($color: $white, $alpha: 0.1);
+
+    &::placeholder {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $white;
+    }
+  }
+
+  button[type="submit"] {
+    cursor: pointer;
+  }
+}
+
 .form__header {
   font-family: $roboto-condensed;
   font-size: 36px;
@@ -21,33 +48,8 @@
   margin: 0;
 }
 
-input[type="text"],
-input[type="tel"],
-textarea {
-  appearance: none;
-
-  color: $white;
-  border-radius: 0;
-  border: 1px solid rgba($color: $white, $alpha: 0.01);
-  outline: none;
-  background-color: rgba($color: $white, $alpha: 0.1);
-
-  &::placeholder {
-    color: $white;
-  }
-
-  &:hover,
-  &:focus {
-    border: 1px solid $white;
-  }
-}
-
 .form__buttons-wrapper {
   margin: 0;
-}
-
-button[type="submit"] {
-  cursor: pointer;
 }
 
 .form__checkbox {

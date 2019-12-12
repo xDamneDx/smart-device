@@ -1,3 +1,7 @@
+.contacts__heading-block {
+  margin-bottom: 25px;
+}
+
 .contacts__header {
   font-family: $roboto-condensed;
   font-size: 15px;
@@ -5,25 +9,32 @@
   line-height: 16px;
   display: block;
   width: 333px;
-  margin-bottom: 25px;
-  padding-left: 2.4px;
+  margin: 0;
   letter-spacing: 0.78px;
   text-transform: uppercase;
   color: $dark-grey;
+  padding-left: 2.4px;
 }
 
-.contacts__wrapper {
+.contacts__list {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
-.contacts__link {
+.contacts__item {
+  list-style: none;
   font-size: 15px;
   font-style: normal;
   line-height: 25px;
   opacity: 0.5;
   color: $dark-grey;
+}
+
+.contacts__link {
+  color: inherit;
 
   &:hover,
   &:focus {
@@ -35,61 +46,40 @@
   }
 }
 
+.contacts__toggle {
+  display: none;
+}
+
 @media (max-width: $tablet-width) {
   .contacts__header {
-    padding-left: 2.1px;
     letter-spacing: 0.74px;
+    padding-left: 2.1px;
   }
 }
 
 @media (max-width: $mobile-width) {
-  .contacts__header {
-    display: block;
-    width: 100%;
+  .contacts__heading-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 23px;
+    padding-right: 13px;
+    padding-bottom: 23px;
+    padding-left: 15px;
     margin: 0;
-    padding: 28px 40px 27px 15px;
+    width: 100%;
     border-top: 1px solid rgba($color: #626962, $alpha: 0.2);
   }
 
-  .contacts__wrapper {
-    display: none;
+  .contacts__header {
+    width: auto;
+    padding-left: 0;
+  }
+
+  .contacts__list {
     padding-top: 5px;
     padding-right: 30px;
     padding-bottom: 26px;
     padding-left: 15px;
-  }
-
-  .contacts__input:checked ~ .contacts__wrapper {
-    display: flex;
-  }
-
-  .contacts__label {
-    position: relative;
-    display: block;
-    width: 100%;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 36px;
-      right: 17px;
-      width: 16px;
-      height: 1px;
-      background-color: #c4c4c4;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 29px;
-      right: 24px;
-      width: 1px;
-      height: 16px;
-      background-color: #c4c4c4;
-    }
-  }
-
-  .contacts__input:checked ~ .contacts__label::after {
-    content: none;
   }
 }

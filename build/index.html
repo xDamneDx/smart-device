@@ -131,14 +131,14 @@
     <section class="ask-us" id="ask-us">
       <h2 class="visually-hidden">Бесплатная консультация</h2>
       <div class="ask-us__wrapper wrapper">
-        <form class="ask-us__form form" action="https://echo.htmlacademy.ru" method="POST">
+        <form class="ask-us__form form" method="POST">
           <h3 class="form__header">Остались вопросы? Задайте их нам!</h3>
           <b class="form__header-desc">Мы проконсультируем Вас бесплатно</b>
           <p class="form__fields-wrapper">
             <label class="visually-hidden" for="ask-us-name">Введите Ваше имя:</label>
             <input type="text" name="name" placeholder="Имя" id="ask-us-name" required="">
             <label class="visually-hidden" for="ask-us-phone">Введите Ваш номер телефона:</label>
-            <input type="tel" name="phone" placeholder="Телефон" id="ask-us-phone" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required="">
+            <input type="tel" name="phone" placeholder="Телефон" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required="">
             <label class="visually-hidden" for="ask-us-question">Введите Ваш вопрос:</label>
             <textarea name="question" cols="30" rows="6" placeholder="Ваш вопрос" id="ask-us-question" required=""></textarea>
           </p>
@@ -162,7 +162,7 @@
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite_auto.svg#logo-service-device"></use>
           </svg>
         </a>
-        <b class="years-of-service">1999-2018 SD Service Devices</b>
+        <b class="page-footer__years-of-service">1999-2018 SD Service Devices</b>
         <ul class="page-footer__social social">
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
@@ -175,48 +175,49 @@
           </li>
         </ul>
       </div>
-      <ul class="page-footer__nav nav">
-        <li class="nav__item nav__item--with-sub">
-          <h2 class="visually-hidden">Навигация сайта</h2>
-          <input class="nav__input visually-hidden" type="checkbox" name="site-nav" id="site-nav-input">
-          <label class="nav__label" for="site-nav-input"><b class="nav__header">Разделы сайта</b></label>
-          <ul class="nav__sub">
-            <li class="nav__item nav__item--about"><a href="#" class="nav__link">О компании</a> </li>
-            <li class="nav__item nav__item--products"><a href="#" class="nav__link">Продукты</a></li>
-            <li class="nav__item nav__item--production"><a href="#" class="nav__link">Производство печатных плат</a></li>
-            <li class="nav__item nav__item--installation"><a href="#" class="nav__link">Монтаж печатных плат</a></li>
-            <li class="nav__item nav__item--components"><a href="#" class="nav__link">Комплектующие</a></li>
-            <li class="nav__item nav__item--delivery"><a href="#" class="nav__link">Доставка</a></li>
-            <li class="nav__item nav__item--contacts"><a href="#" class="nav__link">Контакты</a></li>
-          </ul>
-        </li>
-      </ul>
-      <div class="page-footer__contacts contacts">
-        <input class="contacts__input visually-hidden" type="checkbox" name="contacts" id="contacts-input" checked="">
-        <label class="contacts__label" for="contacts-input"><b class="contacts__header">Наш офис</b></label>
-        <address class="contacts__wrapper">
-          <a href="#" class="contacts__link">г. Мытищи, Олимпийский проспект, д.10</a>
-          <a href="tel:+74955894050" class="contacts__link">+7 (495) 589-40-50</a>
-          <a href="tel:+79250038767" class="contacts__link">+7 (925) 003-87-67</a>
-          <a href="tel:+792692608079" class="contacts__link">+7 (926) 926-080-79</a>
-        </address>
+      <div class="page-footer__nav nav accordion">
+        <div class="nav__heading-block">
+          <h2 class="nav__header">Разделы сайта</h2>
+          <button class="nav__toggle accordion__toggle" type="button"><span class="visually-hidden">Показать/Спрятать разделы сайта</span></button>
+        </div>
+        <ul class="nav__list accordion__pane">
+          <li class="nav__item"><a href="#" class="nav__link">О компании</a> </li>
+          <li class="nav__item"><a href="#" class="nav__link">Комплектующие</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Продукты</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Доставка</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Производство печатных плат</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Монтаж печатных плат</a></li>
+        </ul>
+      </div>
+      <div class="page-footer__contacts contacts accordion">
+        <div class="contacts__heading-block">
+          <h2 class="contacts__header">Наш офис</h2>
+          <button class="contacts__toggle accordion__toggle" type="button"><span class="visually-hidden">Показать/Спрятать контактную информацию</span></button>
+        </div>
+        <ul class="contacts__list accordion__pane">
+          <li class="contacts__item"><span class="contacts__address">г. Мытищи, Олимпийский проспект, д.10</span></li>
+          <li class="contacts__item"><a href="tel:+74955894050" class="contacts__link">+7 (495) 589-40-50</a></li>
+          <li class="contacts__item"><a href="tel:+79250038767" class="contacts__link">+7 (925) 003-87-67</a></li>
+          <li class="contacts__item"><a href="tel:+792692608079" class="contacts__link">+7 (926) 926-080-79</a></li>
+        </ul>
       </div>
     </div>
     <div class="page-footer__copyright copyright">
-      <ul class="copyright__list wrapper">
-        <li class="copyright__item copyright__item--secure">
-          <a class="copyright__text">Все права защищены</a>
-        </li>
-        <li class="copyright__item copyright__item--service">
-          <a class="copyright__text">1999-2018 SD Service Devices</a>
-        </li>
-        <li class="copyright__item copyright__item--confidence">
-          <a href="#" class="copyright__text">Условия конфиденциальности</a>
-        </li>
-        <li class="copyright__item copyright__item--dev-by">
-          <a href="#" class="copyright__text">Developed by wow studio</a>
-        </li>
-      </ul>
+      <div class="copyright__block wrapper">
+        <span class="copyright__item copyright__item--secure">
+          <b class="copyright__text">Все права защищены</b>
+        </span>
+        <span class="copyright__item copyright__item--service">
+          <b class="copyright__text">1999-2018 SD Service Devices</b>
+        </span>
+        <span class="copyright__item copyright__item--confidence">
+          <a class="copyright__link" href="#">Условия конфиденциальности</a>
+        </span>
+        <span class="copyright__item copyright__item--dev-by">
+          <a class="copyright__link" href="#">Developed by wow studio</a>
+        </span>
+      </div>
     </div>
   </footer>
   <section class="modal">
@@ -227,7 +228,7 @@
         <label class="visually-hidden" for="call-name">Введите Ваше имя:</label>
         <input type="text" name="name" placeholder="Имя" id="call-name" required="">
         <label class="visually-hidden" for="call-phone">Введите Ваш номер телефона:</label>
-        <input type="tel" name="phone" placeholder="Телефон" id="call-phone" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required="">
+        <input type="tel" name="phone" placeholder="Телефон" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7}(000)000-00-00" required="">
         <label class="visually-hidden" for="call-question">Введите Ваш вопрос:</label>
         <textarea name="question" cols="30" rows="6" placeholder="Ваш вопрос" id="call-question" required=""></textarea>
       </p>
@@ -242,11 +243,8 @@
       <button class="modal__close" type="button">Закрыть</button>
     </form>
   </section>
-  <script src="js/svgxuse.min.js"></script>
-  <script src="js/imask.min.js"></script>
-  <script src="js/popup.js"></script>
-  <script src="js/tel-mask.js"></script>
-  <script src="js/accordion.js"></script>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

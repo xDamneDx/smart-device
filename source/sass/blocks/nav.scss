@@ -1,13 +1,6 @@
-.nav__sub {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  .nav__item {
-    margin-right: 15px;
-  }
+.nav__heading-block {
+  margin-bottom: 25px;
+  padding-left: 2px;
 }
 
 .nav__header {
@@ -15,45 +8,28 @@
   font-size: 15px;
   font-weight: 400;
   line-height: 16px;
-  display: block;
-  margin-bottom: 25px;
-  padding-left: 2px;
+  margin: 0;
   letter-spacing: 0.76px;
   text-transform: uppercase;
   color: $dark-grey;
 }
 
+.nav__toggle {
+  display: none;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
 .nav__item {
   min-width: 235px;
+  margin-right: 15px;
   list-style: none;
-
-  &--about {
-    order: 1;
-  }
-
-  &--components {
-    order: 2;
-  }
-
-  &--products {
-    order: 3;
-  }
-
-  &--delivery {
-    order: 4;
-  }
-
-  &--production {
-    order: 5;
-  }
-
-  &--contacts {
-    order: 6;
-  }
-
-  &--installation {
-    order: 7;
-  }
 }
 
 .nav__link {
@@ -72,66 +48,21 @@
   }
 }
 
-@media (max-width: $tablet-width) {
-  .nav__item {
-    order: initial;
-  }
-}
-
 @media (max-width: $mobile-width) {
-  .nav {
-    padding: 0;
-  }
-
-  .nav__sub {
-    display: none;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    .nav__item:last-of-type {
-      margin-bottom: 20px;
-    }
-  }
-
-  .nav__input:checked ~ .nav__sub {
-    display: block;
-  }
-
-  .nav__header {
-    display: block;
-    padding-top: 29px;
-    padding-right: 40px;
-    padding-bottom: 27px;
-    padding-left: 15px;
+  .nav__heading-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0;
+    padding-top: 24px;
+    padding-right: 13px;
+    padding-bottom: 23px;
+    padding-left: 15px;
   }
 
-  .nav__label {
-    position: relative;
-    display: block;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 36px;
-      right: 17px;
-      width: 16px;
-      height: 1px;
-      background-color: #c4c4c4;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 29px;
-      right: 24px;
-      width: 1px;
-      height: 16px;
-      background-color: #c4c4c4;
-    }
-  }
-
-  .nav__input:checked ~ .nav__label::after {
-    content: none;
+  .nav__list {
+    padding-right: 15px;
+    padding-bottom: 26px;
+    padding-left: 15px;
   }
 }
