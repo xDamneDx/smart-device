@@ -4,35 +4,14 @@
   var accordionItems = document.querySelectorAll('.accordion');
   var accordionPanes = document.querySelectorAll('.accordion__pane');
 
-  var DEFAULT = {
-    accordion: 2
-  };
-
-  var addClass = function (element, className) {
-    element.classList.add(className);
-  };
-
-  var removeClass = function (element, className) {
-    element.classList.remove(className);
-  };
-
   var hidePane = function (button, pane) {
-    addClass(button, 'accordion__toggle--inactive');
-    addClass(pane, 'accordion__pane--hidden');
+    button.classList.add('accordion__toggle--inactive');
+    pane.classList.add('accordion__pane--hidden');
   };
 
   var showPane = function (button, pane) {
-    removeClass(button, 'accordion__toggle--inactive');
-    removeClass(pane, 'accordion__pane--hidden');
-  };
-
-  var activeByDefault = function (numberOfPane) {
-    var defaultAccordion = accordionItems[numberOfPane - 1];
-    var defaultAccordiontoggle = defaultAccordion.querySelector('.accordion__toggle');
-    var defaultAccordionPane = defaultAccordion.querySelector('.accordion__pane');
-    if (defaultAccordion) {
-      showPane(defaultAccordiontoggle, defaultAccordionPane);
-    }
+    button.classList.remove('accordion__toggle--inactive');
+    pane.classList.remove('accordion__pane--hidden');
   };
 
   var toggleAccordion = function (evt) {
@@ -52,6 +31,4 @@
     hidePane(accordionToggleButton, accordionPane);
     accordionToggleButton.addEventListener('click', toggleAccordion);
   });
-
-  activeByDefault(DEFAULT.accordion);
 })();
