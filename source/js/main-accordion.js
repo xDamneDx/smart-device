@@ -37,7 +37,7 @@
 
   var toggleAccordion = function (evt) {
     Array.prototype.forEach.call(accordionPanes, function (accordionPane) {
-      var button = accordionPane.previousElementSibling.querySelector('.accordion__toggle');
+      var button = accordionPane.closest('.accordion').querySelector('.accordion__toggle');
       if (button === evt.target && !button.classList.contains('accordion__toggle--inactive') || button !== evt.target) {
         hidePane(button, accordionPane);
       } else if (button === evt.target) {

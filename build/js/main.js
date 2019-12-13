@@ -36,9 +36,8 @@
   };
 
   var toggleAccordion = function (evt) {
-    // accordionPanes.forEach(function (accordionPane) {
     Array.prototype.forEach.call(accordionPanes, function (accordionPane) {
-      var button = accordionPane.previousElementSibling.querySelector('.accordion__toggle');
+      var button = accordionPane.closest('.accordion').querySelector('.accordion__toggle');
       if (button === evt.target && !button.classList.contains('accordion__toggle--inactive') || button !== evt.target) {
         hidePane(button, accordionPane);
       } else if (button === evt.target) {
@@ -47,7 +46,6 @@
     });
   };
 
-  // accordionItems.forEach(function (accordion) {
   Array.prototype.forEach.call(accordionItems, function (accordion) {
     var accordionToggleButton = accordion.querySelector('.accordion__toggle');
     var accordionPane = accordion.querySelector('.accordion__pane');
@@ -66,7 +64,6 @@
   var maskedInputs = document.querySelectorAll('input[data-inputmask]');
 
   var applyMask = function () {
-    // maskedInputs.forEach(function (input) {
     Array.prototype.forEach.call(maskedInputs, function (input) {
       var maskOption = {
         mask: input.getAttribute('data-inputmask')
