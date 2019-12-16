@@ -1,4 +1,10 @@
 .form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+
   input[type="text"],
   input[type="tel"],
   textarea {
@@ -20,36 +26,9 @@
     }
   }
 
-  button[type="submit"] {
+  button {
     cursor: pointer;
   }
-}
-
-.form__header {
-  font-family: $roboto-condensed;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 50px;
-  margin: 0;
-  color: $white;
-}
-
-.form__header-desc {
-  font-weight: 400;
-  display: block;
-  color: $white;
-}
-
-.form__fields-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0;
-}
-
-.form__buttons-wrapper {
-  margin: 0;
 }
 
 .form__checkbox {
